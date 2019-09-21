@@ -43,7 +43,7 @@ public class Encrypt {
 		dig2 = dig4;
 		dig4 = temp;
 		
-		
+		//printing the encrypted value
 		System.out.printf("%d%d%d%d", dig1, dig2, dig3, dig4 );
 		
 		

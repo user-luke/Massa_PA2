@@ -54,6 +54,7 @@ public class Decryption {
 			dig4 = dig4 + 10;
 		}
 		
+		//printing the decrypted value
 		System.out.printf("%d%d%d%d", dig1, dig2, dig3, dig4 );
 		
 		

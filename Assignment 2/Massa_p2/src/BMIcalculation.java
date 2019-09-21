@@ -27,7 +27,7 @@ public class BMIcalculation {
 		   
 		   System.out.printf("Your BMI is: %.1f", BMI);
 		}
-		//kg prompts and calculations
+		//kilogram prompts and calculations
 		else if (calculationType.contentEquals("kg")) {
 			System.out.println("Please type your height in meters:");
 			height = scnr.nextDouble();

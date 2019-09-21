@@ -51,20 +51,17 @@ public class issueTable {
 			while ( userInput != -1) {
 				System.out.println("How important would you rate " + topics[rows] +" on a scale of 0-9? Type -1 when participant(s) are finished with this topic");
 				userInput = scnr.nextInt();
-				if (userInput != -1) {
+				if (userInput <= 9 && userInput >= 0) {
 					responses[rows][userInput] = responses[rows][userInput] + 1;
 					numResponses[rows] = numResponses[rows] + 1;
 					//topicPointTot[rows] = topicPointTot[rows] + (responses[rows][userInput] * userInput);
 				}
+				else if ( userInput > 9 || userInput < -1) {
+					System.out.println("Unrecognized value. Please input 1-9 or -1 to advance to the next topic");
+				}
 			}
 			rows = rows+ 1;
 		}
-		
-		//checked when i typed 9 for the first 3 responses when prompted about
-		//videogames that it stored correctly.
-		//System.out.println(responses[0][9] + " people rated Videogames a 9");
-		//checking that we have correct num for total responses
-		//System.out.println(numResponses[0] + " people responded to this issue");
 		
 		//calculate the average for each topic and highest and lowest and store the rows that those values are in
 		for (int i = 0; i < topics.length; i++) {
